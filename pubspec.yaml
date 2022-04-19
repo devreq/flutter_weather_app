@@ -1,5 +1,5 @@
 name: flutter_weather_app
-description: A new Flutter project.
+description: Simple weather app
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -29,15 +29,24 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  logger: ^1.1.0
+  dio: ^4.0.6
+  dio_cache_interceptor: ^3.2.6
+  bloc: ^8.0.3
+  google_fonts: ^2.3.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.4
+  retrofit: ^3.0.1+1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  retrofit_generator: '>=4.0.0 <5.0.0'
+  build_runner: ^2.1.10
+  json_serializable: '>4.4.0'
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
