@@ -4,9 +4,11 @@ import 'package:flutter_weather_app/constants/sizes.dart' as sizes;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
+import '../models/city.model.dart';
+
 class CityButton extends StatelessWidget {
   final String label;
-  final Function()? onPressed;
+  final void Function() onPressed;
   const CityButton({Key? key, required this.label, required this.onPressed})
       : super(key: key);
 
@@ -23,7 +25,7 @@ class CityButton extends StatelessWidget {
               ),
             ),
             onPressed: onPressed,
-            child: Text(toBeginningOfSentenceCase(label),
+            child: Text(label,
                 style: GoogleFonts.poppins(
                     textStyle: const TextStyle(
                         fontWeight: FontWeight.w600,

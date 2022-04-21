@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_weather_app/weather/pages/cities/widgets/detail_horizontal.dart';
+import 'package:flutter_weather_app/weather/pages/cities/widgets/detail_vertical.dart';
 
 class CityDetailPage extends StatelessWidget {
   final String name;
@@ -12,13 +14,9 @@ class CityDetailPage extends StatelessWidget {
     return Scaffold(body: OrientationBuilder(
       builder: (context, orientation) {
         return orientation == Orientation.portrait
-            ? _buildVerticalLayout()
-            : _buildHorizontalLayout();
+            ? const DetailVertical()
+            : const DetailHorizontal();
       },
     ));
   }
-
-  _buildVerticalLayout() {}
-
-  _buildHorizontalLayout() {}
 }

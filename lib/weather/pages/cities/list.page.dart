@@ -16,14 +16,14 @@ class _CityListPageState extends State<CityListPage> {
       padding:
           const EdgeInsetsDirectional.only(start: 24.0, end: 24.0, top: 30.0),
       children: [
-        CityButton(label: 'Краснодар', onPressed: _showDetail()),
-        CityButton(label: 'Москва', onPressed: _showDetail()),
-        CityButton(label: 'Санкт-Петербург', onPressed: _showDetail())
+        CityButton(label: 'Краснодар', onPressed: _onCityPressed(context)),
+        CityButton(label: 'Москва', onPressed: _onCityPressed(context)),
+        CityButton(label: 'Санкт-Петербург', onPressed: _onCityPressed(context))
       ],
     ));
   }
 
-  _showDetail() {
-    print('log');
+  _onCityPressed(BuildContext context) {
+    Navigator.pushNamed(context, '/detailCityWeather');
   }
 }
